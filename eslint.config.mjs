@@ -43,4 +43,15 @@ export default defineConfig([
     "package-lock.json",
     "node_modules/**"
   ]
-});
+}),
+{
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "plugins": ["jest"],
+      "env": {
+        "jest/globals": true
+      }
+    }
+  ]
+};
